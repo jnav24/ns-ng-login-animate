@@ -3,7 +3,13 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "version": "0.0.0",
   "nativescript": {
-    "id": "org.nativescript.nsngloginanimatev2"
+    "id": "org.nativescript.nsngloginanimatev2",
+    "tns-android": {
+      "version": "5.1.0"
+    },
+    "tns-ios": {
+      "version": "5.1.0"
+    }
   },
   "dependencies": {
     "@angular/animations": "~7.0.0",
@@ -16,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "nativescript-angular": "~7.0.0",
+    "nativescript-statusbar": "^5.0.0",
     "nativescript-theme-core": "~1.0.4",
     "reflect-metadata": "~0.1.8",
     "rxjs": "~6.2.0",

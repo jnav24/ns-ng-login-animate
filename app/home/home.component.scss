@@ -1,0 +1,47 @@
+$color: #311B92;
+
+.login-container {
+	background-image: url('~/images/bkgd_login.jpg');
+	background-size: cover;
+	height: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+FlexboxLayout {
+	align-items: center;
+	justify-content: center;
+}
+
+StackLayout {
+	padding: 10 16;
+	width: 95%;
+}
+
+Button, TextField {
+	margin-bottom: 10;
+}
+
+.bgc {
+	background: rgba($color, 0.6);
+}
+
+.fs-container {
+	height: 100%;
+	width: 100%;
+}
+
+.vh {
+	visibility: hidden;
+}
+
+.input {
+	background-color: rgba(darken($color, 10%), 0.8);
+	border-radius: 40;
+	color: #fff;
+	padding: 20;
+
+	&.input-border {
+		border-bottom: 1 solid #900;
+	}
+}

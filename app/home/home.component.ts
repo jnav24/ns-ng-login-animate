@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Page} from "tns-core-modules/ui/page";
+import {registerElement} from "nativescript-angular";
+import {isIOS} from "tns-core-modules/platform";
+
+registerElement("StatusBar", () => require("nativescript-statusbar").StatusBar);
 
 @Component({
   selector: 'app-home',
@@ -6,19 +11,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   moduleId: module.id,
 })
-export class HomeComponent {
-  title = 'ns-ng-login-animate-v2';
-  private counter = 42;
+export class HomeComponent implements OnInit {
+    isIos = isIOS;
+    constructor(private page: Page) { }
 
-  constructor() { }
-
-  public getMessage() {
-    return this.counter > 0 ?
-      `${this.counter} taps left` :
-      'Hoorraaay! You unlocked the NativeScript clicker achievement!';
-  }
-
-  public onTap() {
-    this.counter--;
-  }
+    ngOnInit() {
+        if (!isIOS) {
+            this.page.backgroundSpanUnderStatusBar = true;
+            this.page.actionBarHidden = true;
+        }
+    }
 }

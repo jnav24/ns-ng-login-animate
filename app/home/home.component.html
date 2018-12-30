@@ -1,6 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<StackLayout class="p-20">
-  <Label text="Tap the button" class="h1 text-center"></Label>
-  <Button text="TAP" (tap)="onTap()" class="btn btn-primary btn-active"></Button>
-  <Label [text]="getMessage()" class="h2 text-center" textWrap="true"></Label>
+<ActionBar class="vh"></ActionBar>
+
+<StackLayout class="login-container">
+	<StatusBar ios:barStyle="dark" row="0" *ngIf="isIos"></StatusBar>
+	<StatusBar ios:barStyle="dark" barColor="#311B92" row="0" *ngIf="!isIos"></StatusBar>
+
+	<FlexboxLayout class="bgc fs-container">
+		<FlexboxLayout>
+			<StackLayout>
+				<Textfield
+					class="input input-border"
+					autocapitalizationType="none"
+					autocorrect="false"
+					hint="Email"
+					keyboardType="email"></Textfield>
+				<Textfield
+					class="input input-border"
+					hint="Password"
+					secure="true"></Textfield>
+				<Button text="Login"></Button>
+			</StackLayout>
+		</FlexboxLayout>
+	</FlexboxLayout>
 </StackLayout>
