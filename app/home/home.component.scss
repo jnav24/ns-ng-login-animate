@@ -36,12 +36,13 @@ Button, TextField {
 }
 
 .input {
-	background-color: rgba(darken($color, 10%), 0.8);
+	//background-color: rgba(darken($color, 10%), 0.8);
 	border-radius: 40;
 	color: #fff;
 	padding: 20;
 
 	&.input-border {
-		border-bottom: 1 solid #900;
+		border-bottom-width: 1;
+		border-color:red;
 	}
 }
