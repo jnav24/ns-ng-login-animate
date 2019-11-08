@@ -3,7 +3,7 @@ platforms/
 node_modules/
 platforms/
 hooks/
-
+.idea/
 app/**/*.js
 app/**/*.css
 
